@@ -1,0 +1,1077 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: #333;
+
+    /* Thêm Flexbox cho body để footer luôn ở cuối */
+    display: flex;
+    flex-direction: column; /* Xếp các phần tử theo cột */
+    min-height: 100vh; /* Chiều cao tối thiểu là 100% viewport height */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header Styles */
+header {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.header-left, .header-center, .header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-center {
+    flex-grow: 1;
+    justify-content: center;
+    order: 2;
+}
+
+.header-right {
+    order: 3;
+}
+
+.header-left {
+    order: 1;
+}
+
+.logo a {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #ff69b4; /* Pink */
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+}
+
+nav ul li a:hover {
+    color: #ff69b4; /* Pink */
+}
+
+.auth-links {
+    white-space: nowrap;
+}
+
+.auth-links a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding: 8px 12px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.auth-links a:hover {
+    color: #ff69b4;
+    border-color: #ff69b4;
+}
+
+/* Icons for auth links */
+.auth-links a i {
+    font-size: 1.1em;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    white-space: nowrap; /* Ngăn nút bị xuống dòng text */
+}
+
+.button:hover {
+    background-color: #e05c9f;
+    transform: translateY(-2px);
+}
+
+.button-small {
+    padding: 8px 15px;
+    font-size: 0.9em;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px 0;
+}
+
+/* Updated Footer Styles */
+footer {
+    background-color: #f8f8f8;
+    margin-top: 40px;
+    color: #777;
+    border-top: 1px solid #eee;
+    flex-shrink: 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    padding: 40px 0;
+    text-align: left;
+}
+
+.footer-grid h3 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.footer-grid p {
+    font-size: 0.9em;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.footer-grid p i {
+    margin-right: 8px;
+    color: #ff69b4;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ff69b4;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.social-icons a {
+    color: #555;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-icons a:hover {
+    color: #ff69b4;
+    transform: translateY(-3px);
+}
+
+.newsletter input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 0.9em;
+}
+
+.newsletter .button {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.footer-bottom {
+    background-color: #eee;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.8em;
+    color: #555;
+    border-top: 1px solid #e0e0e0;
+}
+
+/* Home Page Specifics (UPDATED HERO BANNER) */
+.hero-banner-modern {
+    /* Thay thế url() bằng đường dẫn đến ảnh của bạn */
+    background: url('../img/back.jpg') no-repeat center center; 
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45vh;
+    min-height: 350px;
+    overflow: hidden;
+}
+
+.hero-banner-modern::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Lớp phủ tối màu để chữ nổi bật */
+    z-index: 1;
+}
+
+.hero-banner-modern .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-banner-modern h1 {
+    font-size: 3.2em; /* Giảm nhẹ kích thước chữ H1 */
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    line-height: 1.2;
+}
+
+.hero-banner-modern p {
+    font-size: 1.2em; /* Giảm nhẹ kích thước chữ P */
+    margin-bottom: 30px; /* Giảm margin bottom */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+.hero-banner-modern .hero-button {
+    font-size: 1.1em; /* Giảm nhẹ kích thước nút */
+    padding: 12px 30px; /* Giảm padding nút */
+    border-radius: 8px;
+    background-color: #ff69b4;
+    border: 2px solid white;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-banner-modern .hero-button:hover {
+    background-color: #e05c9f;
+    border-color: #ff69b4;
+    transform: translateY(-3px);
+}
+
+
+.category-grid, .product-grid, .testimonial-grid, .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.category-item, .product-item, .testimonial-item, .news-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 15px;
+}
+
+.category-item:hover, .product-item:hover, .news-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.category-item img, .product-item img, .news-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.category-item h3, .product-item h3, .news-item h3 {
+    margin: 15px 0 10px;
+    color: #555;
+    font-size: 1.2em;
+    flex-shrink: 0;
+}
+
+.product-item p {
+    color: #ff69b4;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+.product-item .product-actions {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 0 15px;
+}
+
+.product-item .product-actions .button {
+    flex-grow: 1;
+    max-width: 150px;
+    padding: 8px 10px;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+/* Search and Filter Bar */
+.search-filter-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.search-filter-bar input[type="text"],
+.search-filter-bar select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    flex-grow: 1;
+    max-width: 300px;
+}
+
+.search-filter-bar select {
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Product Detail Page Specifics */
+.product-detail-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.product-detail-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.product-detail-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.product-detail-info {
+    flex: 2;
+    min-width: 300px;
+}
+
+.product-detail-info h1 {
+    text-align: left;
+    font-size: 2.5em;
+    margin-top: 0;
+}
+
+.product-detail-info .price {
+    font-size: 1.8em;
+    color: #ff69b4;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-detail-info .description {
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.product-detail-info .button {
+    font-size: 1.1em;
+    padding: 12px 25px;
+}
+
+.related-products h2 {
+    margin-top: 60px;
+}
+
+/* --- Cart Page Specifics --- */
+
+/* Phần hiển thị khi giỏ hàng trống */
+.empty-cart-section {
+    text-align: center;
+    padding: 50px 20px;
+    border: 2px dashed #ffc0cb; /* Màu hồng nhạt */
+    border-radius: 15px;
+    background-color: #fff9fb; /* Nền hồng nhạt */
+    margin: 50px auto;
+    max-width: 600px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05);
+}
+
+.empty-cart-section .cart-icon-empty {
+    font-size: 4em;
+    color: #ff69b4;
+    margin-bottom: 20px;
+    opacity: 0.7;
+}
+
+.empty-cart-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.empty-cart-section p:last-of-type {
+    margin-bottom: 30px;
+}
+
+.empty-cart-section .continue-shopping-btn-lg {
+    padding: 15px 30px;
+    font-size: 1.1em;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.empty-cart-section .continue-shopping-btn-lg:hover {
+    background-color: #e05c9f;
+}
+
+
+/* Bố cục chính của giỏ hàng khi CÓ SẢN PHẨM */
+.cart-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    /* Không đặt height cố định, để nó tự co giãn */
+}
+
+.cart-items-container {
+    flex: 3; /* Chiếm 3 phần không gian */
+    min-width: 320px; /* Đảm bảo đủ rộng trên màn hình nhỏ */
+    display: grid; /* Sử dụng Grid cho các item */
+    gap: 15px; /* Khoảng cách giữa các item */
+}
+
+.cart-item-modern {
+    display: grid; /* Sử dụng Grid để căn chỉnh các cột */
+    grid-template-columns: 100px 1fr auto auto auto; /* Ảnh, Chi tiết, Số lượng, Tổng, Xóa */
+    align-items: center;
+    gap: 15px; /* Khoảng cách giữa các cột */
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+.cart-item-modern img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-modern .item-details {
+    /* Đảm bảo căn trái cho details */
+    text-align: left;
+}
+
+.cart-item-modern .item-details h4 {
+    margin: 0 0 5px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+.cart-item-modern .item-details .item-price {
+    font-size: 0.95em;
+    color: #888;
+    margin: 0;
+}
+
+.cart-item-modern .item-quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap; /* Ngăn không cho các nút bị xuống dòng */
+}
+
+.cart-item-modern .item-quantity-controls button {
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #555;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.cart-item-modern .item-quantity-controls button:hover {
+    background-color: #e0e0e0;
+    border-color: #ccc;
+}
+
+.cart-item-modern .item-quantity-controls .quantity-value {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-item-modern .item-total {
+    font-weight: bold;
+    color: #ff69b4;
+    font-size: 1.1em;
+    text-align: right;
+    white-space: nowrap; /* Ngăn xuống dòng */
+}
+
+.cart-item-modern .remove-item-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    font-size: 1.3em;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 5px; /* Thêm padding để dễ click */
+}
+
+.cart-item-modern .remove-item-btn:hover {
+    color: #c82333;
+}
+
+/* Phần tóm tắt giỏ hàng */
+.cart-summary {
+    flex: 1; /* Chiếm 1 phần không gian */
+    min-width: 280px;
+    background-color: #f8f8f8;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.cart-summary h3 {
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.cart-summary .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+.cart-summary .summary-row.total-price {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ff69b4;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
+    margin-top: 20px;
+}
+
+/* ĐÂY LÀ PHẦN QUAN TRỌNG NHẤT ĐỂ CÁC NÚT BẰNG NHAU */
+.cart-actions-modern {
+    display: grid; /* Sử dụng Grid để kiểm soát bố cục các nút */
+    grid-template-columns: 1fr; /* Chỉ có một cột, chiếm toàn bộ chiều rộng */
+    gap: 15px; /* Khoảng cách giữa các nút */
+    margin-top: 25px;
+}
+
+.cart-actions-modern .button {
+    width: 100%; /* Đảm bảo nút chiếm hết chiều rộng của cột Grid */
+    box-sizing: border-box; /* Bao gồm padding và border trong width */
+    text-align: center;
+    padding: 12px 20px;
+    font-size: 1em;
+    display: block; /* Đảm bảo nó là block để width 100% hoạt động */
+}
+
+.cart-actions-modern .continue-shopping-btn {
+    background-color: #6c757d; /* Màu xám */
+}
+
+.cart-actions-modern .continue-shopping-btn:hover {
+    background-color: #5a6268;
+}
+
+.cart-actions-modern .checkout-btn {
+    background-color: #28a745; /* Màu xanh lá cây */
+}
+
+.cart-actions-modern .checkout-btn:hover {
+    background-color: #218838;
+}
+
+
+/* Contact, Login, Register, Profile Page Specifics */
+.form-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container input[type="tel"],
+.form-container textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-container textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-container .button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1em;
+}
+
+.form-container p {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.form-container p a {
+    color: #ff69b4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Contact Page (UPDATED CSS) */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Điều chỉnh tỉ lệ cột */
+    gap: 30px; /* Giảm khoảng cách giữa các cột */
+    margin-top: 30px;
+    align-items: start;
+}
+
+.contact-form-column,
+.contact-map-column {
+    padding: 20px; /* Giảm padding bên trong các cột */
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    background-color: #fff;
+}
+
+.contact-form-column h3,
+.contact-map-column h3 {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 15px; /* Giảm margin dưới tiêu đề */
+    color: #333;
+    font-size: 1.4em; /* Giảm nhẹ kích thước tiêu đề */
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 12px; /* Giảm khoảng cách giữa các nhóm form */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 6px; /* Giảm khoảng cách giữa label và input */
+    font-weight: bold;
+    color: #555;
+    font-size: 0.95em; /* Giảm nhẹ kích thước chữ label */
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: calc(100% - 20px); /* Giữ nguyên hoặc điều chỉnh nhẹ padding */
+    padding: 9px; /* Giảm padding input */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 0.95em; /* Giảm nhẹ kích thước chữ input */
+    box-sizing: border-box;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 100px; /* Giảm chiều cao tối thiểu của textarea */
+}
+
+.contact-form .button {
+    width: 100%;
+    padding: 10px; /* Giảm padding nút submit */
+    font-size: 1em; /* Giảm nhẹ kích thước chữ nút */
+    margin-top: 15px;
+}
+
+.contact-map-column .map-container {
+    margin-bottom: 15px; /* Giảm margin dưới map */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.contact-map-column iframe {
+    height: 380px; /* Giảm chiều cao của iframe map trên desktop */
+    display: block;
+}
+
+.contact-info-list {
+    margin-top: 15px; /* Giảm margin trên danh sách thông tin */
+    border-top: 1px dashed #eee;
+    padding-top: 15px; /* Giảm padding trên */
+}
+
+.contact-info-list p {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px; /* Giảm khoảng cách giữa các dòng thông tin */
+    font-size: 0.9em; /* Giảm nhẹ kích thước chữ thông tin */
+    color: #666;
+    text-align: left;
+}
+
+.contact-info-list p i {
+    margin-right: 8px; /* Giảm margin icon */
+    color: #ff69b4;
+    font-size: 1em; /* Giảm nhẹ kích thước icon */
+    flex-shrink: 0;
+    padding-top: 2px;
+}
+
+/* Profile Specific styles */
+.profile-info {
+    text-align: left;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    margin: 20px 0;
+}
+
+.profile-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-info strong {
+    flex-basis: 120px;
+    min-width: 80px;
+    margin-right: 15px;
+    color: #444;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.profile-actions .button {
+    flex-grow: 1;
+    width: auto;
+    min-width: 150px;
+}
+
+/* News Detail Page */
+.news-detail-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.news-detail-content img {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.news-detail-content h1 {
+    font-size: 2.2em;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.news-detail-content .date {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 25px;
+    text-align: left;
+    display: block;
+}
+
+.news-detail-content p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 1em;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-bottom: 15px;
+    }
+
+    .header-left, .header-right, .header-center {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .header-left { order: 1; }
+    .header-right { order: 2; margin-top: 0; }
+    .header-center { order: 3; }
+
+    nav ul {
+        justify-content: space-around;
+    }
+    .auth-links a {
+        margin: 0 8px;
+    }
+
+    /* Responsive for modern hero banner */
+    .hero-banner-modern {
+        padding: 60px 10px; /* Giảm padding trên mobile */
+        height: auto;
+        min-height: 250px; /* Giảm chiều cao tối thiểu trên mobile */
+    }
+
+    .hero-banner-modern h1 {
+        font-size: 2.2em; /* Giảm kích thước chữ H1 trên mobile */
+    }
+
+    .hero-banner-modern p {
+        font-size: 1em; /* Giảm kích thước chữ P trên mobile */
+    }
+
+    .hero-banner-modern .hero-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+
+    .product-detail-container {
+        flex-direction: column;
+    }
+
+    .product-detail-info h1 {
+        text-align: center;
+    }
+
+    .search-filter-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-filter-bar input[type="text"],
+    .search-filter-bar select {
+        width: 80%;
+    }
+
+    /* Responsive Adjustments for Cart Page */
+    .cart-layout {
+        flex-direction: column; /* Xếp chồng các cột trên màn hình nhỏ */
+    }
+
+    .cart-items-container,
+    .cart-summary {
+        width: 100%; /* Chiếm toàn bộ chiều rộng */
+        min-width: unset; /* Bỏ min-width */
+    }
+
+    /* Thay đổi bố cục Grid cho cart-item-modern trên màn hình nhỏ */
+    .cart-item-modern {
+        grid-template-columns: 1fr; /* Chỉ 1 cột, xếp chồng tất cả */
+        text-align: center;
+        justify-items: center; /* Căn giữa các item con */
+    }
+
+    .cart-item-modern img {
+        margin-bottom: 15px;
+    }
+
+    .cart-item-modern .item-details {
+        text-align: center; /* Căn giữa text trên mobile */
+    }
+
+    .cart-item-modern .item-quantity-controls,
+    .cart-item-modern .item-total,
+    .cart-item-modern .remove-item-btn {
+        margin-top: 10px; /* Khoảng cách giữa các phần */
+        width: 100%; /* Chiếm toàn bộ chiều rộng có thể */
+        display: flex; /* Để căn giữa hoặc flex các nút con bên trong */
+        justify-content: center; /* Căn giữa nội dung */
+    }
+
+    /* Đảm bảo các nút hành động (Tiếp tục mua hàng, Gửi đơn hàng) vẫn bằng nhau trên responsive */
+    .cart-actions-modern {
+        grid-template-columns: 1fr; /* Vẫn 1 cột để đảm bảo width 100% */
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"],
+    .form-container input[type="tel"],
+    .form-container textarea {
+        width: calc(100% - 40px);
+        padding: 10px 20px;
+    }
+
+    /* Responsive for Contact Page */
+    .contact-grid {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột trên mobile */
+        gap: 20px; /* Giảm khoảng cách giữa các phần trên mobile */
+    }
+
+    .contact-form-column,
+    .contact-map-column {
+        padding: 15px; /* Giảm padding trên mobile */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: calc(100% - 18px); /* Điều chỉnh lại padding/border trên mobile */
+        padding: 8px; /* Giảm padding input trên mobile */
+    }
+
+    .contact-map-column iframe {
+        height: 280px; /* Giảm chiều cao map trên mobile nhỏ hơn nữa */
+    }
+
+
+    .testimonial-grid, .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-info p {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .profile-info strong {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    .profile-actions {
+        flex-direction: column;
+    }
+    .profile-actions .button {
+        width: 100%;
+    }
+
+    /* Responsive for footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-grid h3 {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    .newsletter input[type="email"],
+    .newsletter .button {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}

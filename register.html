@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản - Cửa hàng hoa tươi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">Flower Shop</a>
+            </div>
+        </div>
+        <div class="header-center">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="auth-links" id="auth-links">
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2>Đăng ký tài khoản mới</h2>
+                <div class="form-container">
+                    <form id="register-form">
+                        <label for="reg-name">Họ tên:</label>
+                        <input type="text" id="reg-name" name="name" required>
+
+                        <label for="reg-email">Email:</label>
+                        <input type="email" id="reg-email" name="email" required>
+
+                        <label for="reg-password">Mật khẩu:</label>
+                        <input type="password" id="reg-password" name="password" required>
+
+                        <label for="reg-confirm-password">Xác nhận mật khẩu:</label>
+                        <input type="password" id="reg-confirm-password" name="confirm-password" required>
+
+                        <button type="submit" class="button">Đăng ký</button>
+                        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>Flower Shop</h3>
+                <p>Nơi mang đến những đóa hoa tươi thắm và ý nghĩa nhất cho mọi khoảnh khắc đặc biệt trong cuộc sống của bạn.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liên kết nhanh</h3>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Liên hệ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Đường Hoa, Quận Thiên Đường, TP. Đà Nẵng</p>
+                <p><i class="fas fa-phone"></i> 0123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@flowershop.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Theo dõi chúng tôi</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h3>Đăng ký nhận tin</h3>
+                    <input type="email" placeholder="Nhập email của bạn">
+                    <button class="button button-small">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Flower Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

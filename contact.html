@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ với chúng tôi - Flower Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="logo">
+                <a href="index.html">Flower Shop</a>
+            </div>
+        </div>
+        <div class="header-center">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header-right">
+            <div class="auth-links" id="auth-links">
+                </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="container">
+                <h2>Liên hệ với chúng tôi</h2>
+                <p class="text-center">Chúng tôi luôn sẵn lòng lắng nghe và hỗ trợ bạn.</p>
+
+                <div class="contact-grid">
+                    <div class="contact-form-column">
+                        <h3>Gửi tin nhắn cho chúng tôi</h3>
+                        <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                            <div class="form-group">
+                                <label for="contact-name">Họ và tên:</label>
+                                <input type="text" id="contact-name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email của bạn:</label>
+                                <input type="email" id="contact-email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Chủ đề:</label>
+                                <input type="text" id="contact-subject" name="subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Nội dung tin nhắn:</label>
+                                <textarea id="contact-message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="button">Gửi tin nhắn</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-map-column">
+                        <h3>Tìm chúng tôi trên bản đồ</h3>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.966980195822!2d108.20019407490409!3d16.06720318461199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3142184d687c0ddd%3A0x532210d879f8c3d1!2zNjYgVsO1IFbEg24gVOG6p24sIENow61uaCBHacOhbiwgVGhhbmggS2jDqiwgxJDDoCBO4bq1bmcgNTUwMDAwLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1752740518335!5m2!1svi!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="contact-info-list">
+                            <h3>Thông tin liên hệ khác</h3>
+                            <p><i class="fas fa-map-marker-alt"></i> Địa chỉ: 123 Đường Hoa, Quận Thiên Đường, TP. Đà Nẵng</p>
+                            <p><i class="fas fa-phone"></i> Điện thoại: 0123 456 789</p>
+                            <p><i class="fas fa-envelope"></i> Email: info@flowershop.com</p>
+                            <p><i class="fas fa-clock"></i> Giờ làm việc: Thứ 2 - Thứ 7 (8:00 - 18:00)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>Flower Shop</h3>
+                <p>Nơi mang đến những đóa hoa tươi thắm và ý nghĩa nhất cho mọi khoảnh khắc đặc biệt trong cuộc sống của bạn.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Liên kết nhanh</h3>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="products.html">Sản phẩm</a></li>
+                    <li><a href="cart.html">Giỏ hàng</a></li>
+                    <li><a href="contact.html">Liên hệ</a></li>
+                    <li><a href="news.html">Tin tức</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Liên hệ</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Đường Hoa, Quận Thiên Đường, TP. Đà Nẵng</p>
+                <p><i class="fas fa-phone"></i> 0123 456 789</p>
+                <p><i class="fas fa-envelope"></i> info@flowershop.com</p>
+            </div>
+            <div class="footer-social">
+                <h3>Theo dõi chúng tôi</h3>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+                <div class="newsletter">
+                    <h3>Đăng ký nhận tin</h3>
+                    <input type="email" placeholder="Nhập email của bạn">
+                    <button class="button button-small">Đăng ký</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 Flower Shop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
