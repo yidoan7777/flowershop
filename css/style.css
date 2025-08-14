@@ -247,7 +247,7 @@ footer {
 /* Home Page Specifics (UPDATED HERO BANNER) */
 .hero-banner-modern {
     /* Thay thế url() bằng đường dẫn đến ảnh của bạn */
-    background: url('../img/back.jpg') no-repeat center center; 
+    background: url('/img/123.png') no-repeat center center; 
     background-size: cover;
     color: white;
     text-align: center;
